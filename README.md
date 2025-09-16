@@ -21,6 +21,22 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGRAM:
-# OUTPUT:
-# RESULT:
+```from django.shortcuts import render
+from http.server import HTTPServer , BaseHTTPRquestHandler
+content ='''<html>
+              <h1>**HELLO**</h1>
+            </html>'''
+class MyServer(BaseHTTPRequestHandler):               
+    def do_GET(self):
+        print("Get request recived...")
+        self.send_respone(200)
+        self.send_header("content-type","text/html")
+        self.send_header()
+        self.wfile.write(content.encode())
+ print("this is my webserver")       
+ server_address =('',8000)
+ httpd = HTTTPServer(server_address,MyServer)
+ httpd.server_forever()
+ ```
+
 The program for implementing simple webserver is executed successfully.
