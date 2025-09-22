@@ -99,9 +99,9 @@ print("my webserver is running...")
 httpd.serve_forever()
 ```
 # output:
-![alt text](<../output 1.PNG>)
+![alt text](<output 1.PNG>)
 
-![alt text](<../output 2.PNG>)
+![alt text](<output 2.PNG>)
 
 
 # result:
